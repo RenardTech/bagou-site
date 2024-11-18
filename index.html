@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <nav id="nav-bar">
+        <a href="#" id="home" style="background-color: blue; color: white; border: none;">Accueil</a>
+
+        <!-- Bouton avec une icône -->
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+             Nos Services <i>&#9660;</i>
+        </button>
+
+        <!-- Contenu du menu déroulant -->
+        <div class="dropdown-content">
+            <a href="formations.html">Formation</a>
+            <a href="auto-strategie.html">Automatisason de srategie</a>
+            
+        </div>
+    </nav>
+    <section class="presentation">
+        <h1>Trading solution Fiable</h1>
+        <div class="cadre-viking">
+            <h3 style="margin-left: -50%; text-decoration: underline;">Présentation</h3>
+            <img id="viking" src="IMG_20241117_041833.jpg" alt="Viking_Strategy_Indicator V2.50">
+            <h3>Viking_Strategy_Indicator V2.50</h3>
+        </div>
+        <div class="description">
+            <h3 style="margin-left: -50%; text-decoration: underline">Description</h3>
+            <p>
+                Tout d'abord, il est important de souligner que cet indicateur de trading n'est 
+                pas répétitif et ne présente pas de retard.
+            </p>
+            <p>
+                C'est la meilleur solution que j'ai conçue sur la base de mes 4 années d'expérience 
+                et des différentes méthodologies que j'ai expérimentées(SMC, SnD, HLZ, ICT, WICKOFF...)
+                pour aider les personnes qui n'ont pas assez de temps à consacrer aux graphiques pour 
+                analyser le marché jusqu'à attendre les confirmations avant d'ouvrir des transactions.
+            </p>
+        </div>
+        <button id="btn-presentation">
+            <a href="autres-outils.html">Découvrir Autres Outils</a>
+        </button>
+    </section>
+   
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h4>Aigle Strengh Trading</h4>
+            <p>
+                Le trading est une activité qui présente un risque élevé, donc il est conseillé 
+                d'investir l'argent que vous pouvez vous permetre de perdre
+            </p>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  
+    <div class="footer-center">
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="auto-strategie.html">Services</a></li>
+          <li><a href="https://wa.me/c/22898740835">Contact</a></li>
+        </ul>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 BAGOUDJARE - TRADING </p>
+     
+    </div>
+</footer>
+  
+
+    <script>
+        function toggleDropdown() {
+            const content = document.querySelector('.dropdown-content');
+            const icon = document.querySelector('.dropdown-btn i');
+           
+            // Alterne la visibilité du contenu
+            content.classList.toggle('open');
+           
+            // Alterne l'icône entre bas (▼) et haut (▲)
+            if (content.classList.contains('open')) {
+                icon.innerHTML = '&#9650;';  // Icône vers le haut
+            } else {
+                icon.innerHTML = '&#9660;';  // Icône vers le bas
+            }
+        }
+    </script>
+
+</body>
+</html>

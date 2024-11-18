@@ -1,0 +1,474 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#nav-bar{
+    border-bottom: #f1f1f1 solid 1px;
+    margin: 3%;
+}
+#home{
+    text-decoration: none;
+    color: blue;
+    border: #ddd solid 1px;
+    border-bottom: ;
+    padding: 10px;
+    border-radius: 10%;
+}
+/* Style de base pour le bouton */
+.dropdown-btn {
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style de l'icône */
+.dropdown-btn i {
+    margin-right: 10px;
+}
+
+/* Style du contenu déroulant */
+.dropdown-content {
+    display: none;  /* Caché par défaut */
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.dropdown-content a{
+    justify-content: space-between;
+    padding: 10px;
+    text-decoration: none;
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}
+
+/* Effet de transition lors de l'ouverture */
+.dropdown-content.open {
+    display: block;
+    transition: max-height 0.3s ease-out;
+}
+
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-size: 1.1em;
+    color: #555;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+
+  
+  .footer-left h4 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-left p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  .footer-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-center ul,
+  .footer-right .social-links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-center ul li {
+    margin: 10px 0;
+    justify-content: space-between;
+    padding: 6px;
+  }
+  
+  .footer-center ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+  }
+  
+  .footer-center ul li a:hover {
+    color: #f39c12;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    color: #ccc;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #f39c12;
+  }
+  
+  /* Footer bottom section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 1em;
+    color: #ccc;
+  }
+  
+  .footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    color: #f39c12;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-left, .footer-center, .footer-right {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  #tete .container{
+
+  }
+
+
+/* En-tête */
+header {
+    background-color: #1a73e8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#tete h2 {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+
+}
+
+#tete p {
+    font-size: 1em;
+    color: black;
+    font-size: 1em;
+}
+
+/* Section d'introduction */
+.intro {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.intro h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1em;
+}
+
+/* Formulaire de demande */
+.form {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.form h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1558b0;
+    color: white;
+}
+
+/* En-tête */
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Section des articles */
+.articles {
+    padding: 40px 0;
+}
+
+.article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-title {
+    font-size: 1em;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.article-description {
+    font-size: 1.1em;
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+.caption {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    color: #333;
+    border-top: 2px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-title {
+        font-size: 1.6em;
+    }
+
+    .article-description {
+        font-size: 1em;
+    }
+
+    .caption {
+        font-size: 0.9em;
+    }
+}
+
+.presentation{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.presentation h1{
+    background-color: green;
+    color: white;
+    padding: 2%;
+    border-radius: 6px;
+   
+}
+.cadre-viking{
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+#viking{
+    width: 80%;
+    height: 50%;
+    margin-top: 3%;
+}
+.description{
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+.description p{
+    padding: 2%;
+    opacity: 0.7;
+    margin: 10px;
+}
+#btn-presentation{
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#btn-presentation a{
+    text-decoration: none;
+    color: white;
+
+}
+#btn-presentation:hover {
+    background-color: #1558b0;
+    color: white;
+}
+.commande{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.commande button{
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.commande button a{
+    text-decoration: none;
+    color: white;
+
+}
+.commande button:hover{
+    background-color: #1558b0;
+    color: white;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Automatiser sa strategie</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <a href="index.html" id="home">Accueil</a>
+
+        <!-- Bouton avec une icône -->
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+            Nos Services  <i>&#9660;</i>
+        </button>
+
+        <!-- Contenu du menu déroulant -->
+        <div class="dropdown-content">
+            <a href="formations.html">Formation</a>
+            <a href="#">Automatisason de srategie</a>
+            
+        </div>
+    </nav>
+    <section>
+        <header id="tete">
+            <div class="container">
+                <h2>Demandez l’automatisation de votre stratégie de trading</h2> <hr>
+                <p>Transformez vos idées en un robot de trading performant.</p>
+            </div>
+        </header>
+    
+        <section class="intro">
+            <div class="container">
+                <h2>Pourquoi automatiser votre stratégie de trading ?</h2> <hr>
+                <p>L'automatisation de votre stratégie de trading peut vous aider à exploiter 
+                    les opportunités du marché de manière optimale. Que vous soyez un trader 
+                    débutant ou expérimenté, nous vous aidons à créer une solution sur mesure qui
+                     répond à vos objectifs et votre style de trading.
+                </p>
+            </div>
+        </section>
+    
+        <section class="form">
+            <div class="container">
+                <h2>Demandez votre automatisation</h2>
+                <form id="automation-form" onsubmit="sendEmail(event)">
+                    <div class="form-group">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="strategy-type">Type de stratégie :</label>
+                        <select id="strategy-type" name="strategy-type" required>
+                            <option value="scalping">Scalping</option>
+                            <option value="swing">Swing Trading</option>
+                            <option value="trend">Trend Following</option>
+                            <option value="arbitrage">Arbitrage</option>
+                            <option value="custom">Autre</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="strategy-description">Description de la stratégie :</label>
+                        <textarea id="strategy-description" name="strategy-description" rows="4" required></textarea>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="indicators">Indicateurs utilisés :</label>
+                        <input type="text" id="indicators" name="indicators" placeholder="RSI, MACD, etc.">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="budget">Budget (facultatif) :</label>
+                        <input type="number" id="budget" name="budget" placeholder="€">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="urgency">Urgence de la demande :</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="urgent">Urgent</option>
+                            <option value="standard">Standard</option>
+                        </select>
+                    </div>
+    
+                    <button type="submit">Soumettre ma demande</button>
+                </form>
+            </div>
+        </section>
+    
+        <footer>
+
+            <div class="social-links">
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          
+            <div class="footer-center">
+                <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="formations.html">Formations</a></li>
+                  <li><a href="https://wa.me/c/22898740835">Contact</a></li>
+                </ul>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2024 BAGOUDJARE - TRADING </p>
+             
+            </div>
+        </footer>
+        
+
+    </section>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        function toggleDropdown() {
+            const content = document.querySelector('.dropdown-content');
+            const icon = document.querySelector('.dropdown-btn i');
+           
+            // Alterne la visibilité du contenu
+            content.classList.toggle('open');
+           
+            // Alterne l'icône entre bas (▼) et haut (▲)
+            if (content.classList.contains('open')) {
+                icon.innerHTML = '&#9650;';  // Icône vers le haut
+            } else {
+                icon.innerHTML = '&#9660;';  // Icône vers le bas
+            }
+        }
+
+         // Initialize EmailJS
+         (function () {
+                emailjs.init("service_xbvvois"); // Remplacez par votre User ID EmailJS
+            })();
+    
+            // Fonction d'envoi de l'email
+            function sendEmail(event) {
+                event.preventDefault();
+    
+                const form = document.getElementById("automation-form");
+    
+                // Préparer les données du formulaire
+                const formData = new FormData(form);
+                const formObject = {};
+    
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+    
+                // Envoyer l'email via EmailJS
+                emailjs.send("service_xbvvois", "template_bomgiq3", formObject)
+                    .then(function(response) {
+                        alert("Votre demande a bien été envoyée !");
+                        form.reset();
+                    }, function(error) {
+                        alert("Erreur lors de l'envoi de votre demande. Veuillez réessayer.");
+                    });
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription à une Formation</title>
+</head>
+<body style="background-color: #f4f4f9">
+    <nav id="nav-bar">
+        <a href="index.html" id="home">Accueil</a>
+
+        <!-- Bouton avec une icône -->
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+            Nos Services  <i>&#9660;</i>
+        </button>
+
+        <!-- Contenu du menu déroulant -->
+        <div class="dropdown-content">
+            <a href="#">Formation</a>
+            <a href="auto-strategie.html">Automatisason de srategie</a>
+            
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <h1>Inscription</h1>
+            <form id="formulaire-inscription">
+                <div class="form-group">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="formation">Formation choisie :</label>
+                    <select id="formation" name="formation" required>
+                        <option value="formation_1">Formation 1 -Programmation</option>
+                        <option value="formation_2">Formation 2 - Trading</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="commentaires">Commentaires :</label>
+                    <textarea id="commentaires" name="commentaires"></textarea>
+                </div>
+    
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    
+     </section>
+
+     <footer>
+
+        <div class="social-links">
+            <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+        <div class="footer-center">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="formations.html">Formations</a></li>
+              <li><a href="https://wa.me/c/22898740835">Contact</a></li>
+            </ul>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2024 BAGOUDJARE - TRADING </p>
+         
+        </div>
+    </footer>
+    
+
+    <script>
+        function toggleDropdown() {
+            const content = document.querySelector('.dropdown-content');
+            const icon = document.querySelector('.dropdown-btn i');
+           
+            // Alterne la visibilité du contenu
+            content.classList.toggle('open');
+           
+            // Alterne l'icône entre bas (▼) et haut (▲)
+            if (content.classList.contains('open')) {
+                icon.innerHTML = '&#9650;';  // Icône vers le haut
+            } else {
+                icon.innerHTML = '&#9660;';  // Icône vers le bas
+            }
+        }
+
+        // Remplacez cette ligne par votre propre clé publique EmailJS
+        emailjs.init('dSO_mA3dzvL-I82GW');
+    
+    // Événement de soumission du formulaire
+    document.getElementById("formulaire-inscription").addEventListener("submit", function(event) {
+        event.preventDefault();  // Empêche la soumission par défaut du formulaire
+
+        // Récupérer les données du formulaire
+        const formData = new FormData(this);
+       
+        // Envoi des données par email via EmailJS
+        emailjs.sendForm('service_xbvvois', 'template_bomgiq3', formData)
+            .then(function(response) {
+                alert("Votre inscription a bien été envoyée ! Nous vous remercions.");
+            }, function(error) {
+                alert("Une erreur est survenue. Veuillez réessayer.");
+            });
+    });
+    </script>
+</body>
+</html>

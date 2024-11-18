@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Autres-Outils</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <a href="index.html" id="home">Accueil</a>
+
+        <!-- Bouton avec une icône -->
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+            Nos Services  <i>&#9660;</i>
+        </button>
+
+        <!-- Contenu du menu déroulant -->
+        <div class="dropdown-content">
+            <a href="formations.html">Formation</a>
+            <a href="auto-strategie.html">Automatisason de srategie</a>
+            
+        </div>
+    </nav>
+    <section class="articles">
+        <div class="container">
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 1">
+                <h2 class="article-title">Indicateur de signal de stratégie Viking</h2>
+                <ul class="article-description">
+                    <li>Détecte et decine la structure du marché</li>
+                    <li>Détecte et dessine une rupture de structure</li>
+                    <li>Affiche les signaux d'achat et de vente selon la théorie NRTR</li>
+                    <li>Affiche les d'entrée des snipers</li>
+                </ul>
+                <p class="caption">
+                    Cet indicateur n'est qu'un élement clé du système.
+                    En acquérant cet indicateur avec une licence à vie, ou annuel, 
+                    vous bénéficierez également d'autres composants du système
+                    qui sont ci-dessous:
+                </p>
+            </article>
+
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 2">
+                <h2 class="article-title">Viking_Strategy_Signal EA</h2>
+                <ul class="article-description">
+                    <li>
+                        Envoie des signaux avec capture à l'appui via Télégram
+        
+                    </li>
+                    <li>
+                        Peut gérer les positions que vous ouvrez manuelement
+                        à votre place
+                    </li>
+                    <li>
+                        Peut mettre en oeuvre un stop loss suiveur et faire 
+                        également Break even
+                    </li>
+                </ul>
+                <p class="caption">Composant 1</p>
+            </article>
+
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 3">
+                <h2 class="article-title">ZONES DE BAGOU</h2>
+                <ul class="article-description">
+                    <li>
+                        Dessine des zones d'entrée en fonction du système 
+                        et de la tendance à court terme
+                    </li>
+                </ul>
+                <p class="caption">Composant 2</p>
+            </article>
+
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 4">
+                <h2 class="article-title">BAGOU PDHL</h2>
+                <ul class="article-description">
+                    <li>Dessine les zones d'entrée selon le système</li>
+                </ul>
+                <p class="caption">Composant 3</p>
+            </article>
+
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 4">
+                <h2 class="article-title">SNIPER BANDS</h2>
+                <ul class="article-description">
+                    <li>
+                        Encadre le marché, confirme, avertit et fournit
+                        des niveaux de repositionnement pour les transactions
+                    </li>
+                </ul>
+                <p class="caption">Composant 4</p>
+            </article>
+
+            <article class="article">
+                <img src="IMG_20241117_041833.jpg" alt="Image 4">
+                <h2 class="article-title">TSF STRATEGY TESTER</h2>
+                <ul class="article-description">
+                    <li>
+                        Cet indicateur vous aidera à pratiquer le système
+                        et à le maitriser avant de passer sur un compte réel
+                    </li>
+                </ul>
+                <p class="caption">Composant 5</p>
+            </article>
+        </div>
+        <div class="commande">
+            <button>
+                <a href="https://l.wl.co/l?u=https%3A%2F%2Fwww.mql5.com%2Fen%2Fmarket%2Fproduct%2F124360">Acheter Maintenant</a>
+            </button>
+        </div>
+    </section>
+
+       <!-- Footer -->
+<footer>
+
+    <div class="social-links">
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  
+    <div class="footer-center">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="https://wa.me/c/22898740835">Contact</a></li>
+        </ul>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 BAGOUDJARE - TRADING </p>
+     
+    </div>
+</footer>
+
+    <script>
+        function toggleDropdown() {
+            const content = document.querySelector('.dropdown-content');
+            const icon = document.querySelector('.dropdown-btn i');
+           
+            // Alterne la visibilité du contenu
+            content.classList.toggle('open');
+           
+            // Alterne l'icône entre bas (▼) et haut (▲)
+            if (content.classList.contains('open')) {
+                icon.innerHTML = '&#9650;';  // Icône vers le haut
+            } else {
+                icon.innerHTML = '&#9660;';  // Icône vers le bas
+            }
+        }
+    </script>
+</body>
+</html>
